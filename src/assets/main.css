@@ -1,0 +1,53 @@
+@import './base.css';
+
+#app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: white;
+  color: black;
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  #app-wrapper {
+    flex-direction: row;
+  }
+  header {
+    height: 100vh;
+  }
+  main {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
